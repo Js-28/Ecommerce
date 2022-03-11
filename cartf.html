@@ -1,0 +1,400 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="cart.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="dropdown.css">
+<link rel="stylesheet" href="slideshow.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="featureproduct.css">
+
+<style>
+
+* {box-sizing: border-box;}
+
+.f{
+		float:right;
+		margin-right:20px;
+		width:10%;
+		height:5%;
+		background-color:#FE980F;
+}
+.f:hover{
+cursor:pointer;
+background-color:#B9770E ;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav img{
+  float:left;
+  margin-left: 20px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+em{
+    font-style: normal;
+    color: #ed563b;
+   <!-- font-weight: 900;-->
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+ margin-left: 80px;
+border: 3px solid #0080ff;
+ border-radius: 10px;
+width: 35%;
+ box-sizing: border-box;
+ }
+
+.topnav .search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+<!--.classes-title{
+    text-align: center;
+    margin-top: 120px;
+}
+.features{
+    height:140vh;
+    padding:10px 100px 0px 100px;
+}-->
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    
+  }
+ .topnav input[type=text], .topnav .search-container button {
+    
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="topnav header-content">
+ <img src=".\images\image.jpg" class="img">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search for Products,Brands etc." name="search">
+      <button><i class="fa fa-search"></i></button>
+       <a href="signup.html"  class="notification" style="margin-left:20px;" onclick="myFunction()">Login\Register</a>
+        <!--<script>
+function myFunction() {
+  window.open("signup.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=800,height=800");
+}
+</script>-->
+        <a href="cart.html" class="notification" style="margin-left:30px;"><i class="fa fa-shopping-cart"> Cart</i>
+		<span class="badge" id="badge"></span></a>
+		<a href="#" class="notification" style="margin-left:10px;"><i class="fa fa-heart"> Favourites</i>
+		<!--<span class="badge">3</span>--></a>
+    </form>
+  </div>
+</div>
+</header>
+<!--<section id="cart_items">-->
+		<h1 style="color:white; margin-top:10px;margin-bottom:10px;">Shopping Cart</h1>
+		<div class="container" align="center" style="padding-top:10px;">
+
+			<div class="table-responsive cart_info">
+				<table class="table table-condensed" border="0">
+					<thead>
+						<tr class="cart_menu" align="center">
+							<td class="image">Item</td>
+							<td class="description"></td>
+							<td class="price">Price</td>
+							<td class="quantity">Quantity</td>
+							<td class="total">Total</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr align="center" id="r1">
+							<td class="cart_product">
+								<a href="#"><img src=".\images\headphones1.jpg" alt=""></a>
+							</td>
+							<td class="cart_description">
+								<h4><a href="#">Boat</a></h4>
+								<p>Model Number: 125532</p>
+							</td>
+							<td class="cart_price">
+								<p>&#x20B9;1499</p>
+							</td>
+							<td class="cart_quantity" align="center">
+								<div class="cart_quantity_button">
+									<a class="cart_quantity_up"  onclick="addi()"> + </a>
+									<input class="cart_quantity_input" type="text" id="j" name="quantity" value="1" size="1" onchange="ans()">
+									<a class="cart_quantity_down" onclick="sub()"> - </a>
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price" id="p1">&#x20B9;1499</p>
+							</td>
+							<td class="cart_delete">
+								<a class="cart_quantity_delete"><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+
+						<tr align="center" id="r2">
+							<td class="cart_product">
+								<a href="#"><img src=".\images\iwatch1.jpeg" alt=""></a>
+							</td>
+							<td class="cart_description">
+								<h4><a href="#">Apple</a></h4>
+								<p>Model Number: 125500</p>
+							</td>
+							<td class="cart_price">
+								<p>&#x20B9;45000</p>
+							</td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+									<a class="cart_quantity_up" onclick="addit();"> + </a>
+									<input class="cart_quantity_input" id="22" type="text" name="quantity" value="1" autocomplete="off" size="2">
+									<a class="cart_quantity_down" onclick="subt();"> - </a>
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price" id="p2">&#x20B9;45000</p>
+							</td>
+							<td class="cart_delete">
+								<a class="cart_quantity_delete"><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+						<tr align="center" id="r3">
+							<td class="cart_product">
+								<a href="#"><img src=".\images\perfume1.png" alt=""></a>
+							</td>
+							<td class="cart_description">
+								<h4><a href="#">Bleu De Chanel</a></h4>
+								<p>Model Number: 125580</p>
+							</td>
+							<td class="cart_price">
+								<p>&#x20B9;5000</p>
+							</td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+									<a class="cart_quantity_up" onclick="addition();"> + </a>
+									<input class="cart_quantity_input" type="text" id="33" name="quantity" value="1" autocomplete="off" size="2">
+									<a class="cart_quantity_down" onclick="subtract();"> - </a>
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price" id="p3">&#x20B9;5000</p>
+							</td>
+							<td class="cart_delete" align="center">
+								<a class="cart_quantity_delete"><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+						<tr align="center">
+							<td class="cart_product">
+								<!--<a href=""><img src="C:\Users\hp\Downloads\iwatch1.jpeg" alt=""></a>-->
+								<p style="color: #FE980F;font-size: 30px; padding-top:10px;">Total</p>
+							</td>
+							<td class="cart_description">
+								<!--<h4><a href="">Apple</a></h4>
+								<p>Model Number: 125500</p>-->
+							</td>
+							<td class="cart_price">
+								<!--<p>&#x20B9;45000</p>-->
+							</td>
+							<td class="cart_quantity">
+								<!--<div class="cart_quantity_button">
+									<a class="cart_quantity_up" href=""> + </a>
+									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+									<a class="cart_quantity_down" href=""> - </a>
+								</div>-->
+							</td>
+							<td class="cart_total">
+								<p style="color: #FE980F;font-size: 30px; padding-top:10px;" id="1234">&#x20B9;51499</p>
+							</td>
+							<td class="cart_delete">
+								<!--<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div>
+		<button class="f">PAY NOW</button>
+		</div>
+	<!--</section>--> <!--/#cart_items-->
+	<footer class="footer-distributed" style="margin-top:100px">
+
+			<div class="footer-left">
+          <!--<img src="img/logo.png">-->
+				<h3>About<span>Walmart</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2019 Walmart Cart Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<a href="#"><i class="fa fa-map-marker"></i></a>
+					  <p><span>309 - Rupa Solitaire,
+						 Bldg. No. A - 1</span>
+						Mahape, Ahmedabad - 380005</p>
+				</div>
+
+				<div>
+					<a href="#"><i class="fa fa-phone"></i></a>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<a href="#"><i class="fa fa-envelope"></i></a>
+					<p><a href="mailto:support@eduonix.com">support@walmart.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer the consumers with the good eco-friendly enumerate products to fulfill their requirements.</p>
+				<div class="footer-icons">
+				<a href="#"><i class="fa fa-facebook icon"></i></a>
+					<a href="#"><i class="fa fa-twitter icon"></i></a>
+					<a href="#"><i class="fa fa-instagram icon"></i></a>
+					<a href="#"><i class="fa fa-linkedin icon"></i></a>
+					<a href="#"><i class="fa fa-youtube icon"></i></a>
+				</div>
+			</div><hr style=" background-color:white;margin-top:2px;">
+			<div class="footer-card-icon" style="padding-top:10px; padding-bottom:0px;">
+			 <i class="fa fa-cc-discover"></i>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-paypal"></i>
+                        <i class="fa fa-cc-visa"></i>
+			</div>
+		</footer>
+<script>
+var r1=1;var r2=1;var r3=1;
+var final_ans=51499;
+function addi(){
+var i=parseInt(document.getElementById('j').value);
+
+	i=i+1;
+	r1=i;
+	document.getElementById('j').value= i;
+	var a=i*1499;
+	document.getElementById('p1').innerHTML= '&#x20B9;'+a;
+	ans=ans+a-1499;
+	document.getElementById("1234").innerHTML='&#x20B9;'+ans;
+	final_ans=ans;
+	}
+function addit(){
+
+var j=parseInt(document.getElementById('22').value);
+j=j+1;
+r2=j;
+	document.getElementById('22').value= j;
+	var a=j*45000;
+	document.getElementById('p2').innerHTML= '&#x20B9;'+a;
+	ans=ans+a-45000;
+	document.getElementById("1234").innerHTML='&#x20B9;'+ans;
+	final_ans=ans;
+	
+	}
+function addition(){
+var k=parseInt(document.getElementById('33').value);
+k=k+1;
+r3=k;
+	document.getElementById('33').value= k;
+	var a=k*5000;
+	document.getElementById('p3').innerHTML= '&#x20B9;'+a;
+	ans=ans+a-5000;
+	document.getElementById("1234").innerHTML='&#x20B9;'+ans;
+	final_ans=ans;
+	
+}
+function sub(){
+
+var i=parseInt(document.getElementById('j').value);
+	if (i>1){
+	i=i-1;
+	r1=i;
+	document.getElementById('j').value= i;
+	var a=i*1499;
+	document.getElementById('p1').innerHTML= '&#x20B9;'+a;
+	ans=ans-a;
+	document.getElementById("1234").innerHTML='&#x20B9;'+ans;
+	final_ans=ans;
+	}
+}
+function subt(){
+
+var j=parseInt(document.getElementById('22').value);
+if (j>1){
+	j=j-1;
+	r2=j;
+	document.getElementById('22').value= j;
+	var a=j*45000;
+	document.getElementById('p2').innerHTML= '&#x20B9;'+a;
+	ans=ans-a;
+	document.getElementById("1234").innerHTML='&#x20B9;'+ans;
+	final_ans=ans;
+	}
+}
+function subtract(){
+var k=parseInt(document.getElementById('33').value);
+if (k>1){
+	k=k-1;
+	r3=k;
+	document.getElementById('33').value= k;
+	var a=k*5000;
+	document.getElementById('p3').innerHTML= '&#x20B9;'+a;
+	ans=ans-a;
+	document.getElementById("1234").innerHTML='&#x20B9;'+ans;
+	final_ans=ans;
+	}
+}
+
+		var a=document.getElementById("j").value;
+		var b=document.getElementById("22").value;
+		var c=document.getElementById("33").value;
+		var ans=a*1499+b*45000+c*5000;
+		document.getElementById("1234").innerHTML='&#x20B9;'+ans;
+		ans=final_ans
+
+
+</script>
+
+</body>
+</html>

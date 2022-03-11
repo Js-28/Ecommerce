@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="dropdown.css">
+<link rel="stylesheet" href="slideshow.css">
+<link rel="stylesheet" href="button.css">
+<link rel="stylesheet" href="featureproduct.css">
+<link rel="stylesheet" href="footer.css">
+<style>
+* {box-sizing: border-box;}
+
+
+.active {
+  background-color: #4CAF50;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav img{
+  float:left;
+  margin-left: 20px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+em{
+    font-style: normal;
+    color: #ed563b;
+   <!-- font-weight: 900;-->
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+ margin-left: 80px;
+border: 3px solid #0080ff;
+ border-radius: 10px;
+width: 35%;
+ box-sizing: border-box;
+ }
+
+.topnav .search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+<!--.classes-title{
+    text-align: center;
+    margin-top: 120px;
+}
+.features{
+    height:140vh;
+    padding:10px 100px 0px 100px;
+}-->
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    
+  }
+ .topnav input[type=text], .topnav .search-container button {
+    
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+</style>
+
+</head>
+<body ng-app="App">
+
+<script>
+var i=0;
+	function input(){
+	i=i+1;
+	document.getElementById("badge").innerHTML = i;
+	document.getElementById("badge").style.background = "#FE980F";
+	}
+	function add1(){
+	document.getElementById('add1').innerHTML='ADDED';
+	
+	}
+	function add2(){
+	document.getElementById('add2').innerHTML='ADDED';
+	
+	}
+	function add3(){
+	document.getElementById('add3').innerHTML='ADDED';
+	
+	}
+	function add4(){
+	document.getElementById('add4').innerHTML='ADDED';
+	
+	}
+	function add5(){
+	document.getElementById('add5').innerHTML='ADDED';
+	
+	}
+	function add6(){
+	document.getElementById('add6').innerHTML='ADDED';
+	
+	}
+	function add7(){
+	document.getElementById('add7').innerHTML='ADDED';
+	
+	}
+	function add8(){
+	document.getElementById('add8').innerHTML='ADDED';
+	
+	}
+	function add9(){
+	document.getElementById('add9').innerHTML='ADDED';
+	
+	}
+	function add10(){
+	document.getElementById('add10').innerHTML='ADDED';
+	
+	}
+	function add11(){
+	document.getElementById('add11').innerHTML='ADDED';
+	
+	}
+	function add12(){
+	document.getElementById('add12').innerHTML='ADDED';
+	
+	}
+	function add13(){
+	document.getElementById('add13').innerHTML='ADDED';
+	
+	}
+	function add14(){
+	document.getElementById('add14').innerHTML='ADDED';
+	
+	}
+	function add15(){
+	document.getElementById('add15').innerHTML='ADDED';
+	
+	}
+	function add16(){
+	document.getElementById('add16').innerHTML='ADDED';
+	
+	}
+</script>
+	
+	
+<header>
+<div class="topnav header-content">
+ <img src=".\images\image.jpg" class="img">
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search for Products,Brands etc." name="search">
+      <button><i class="fa fa-search"></i></button>
+       <a href="signup.html"  class="notification" style="margin-left:20px;" onclick="myFunction()">Login\Register</a>
+        <!--<script>
+function myFunction() {
+  window.open("signup.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=800,height=800");
+}
+</script>-->
+        <a href="cartf.html" class="notification" style="margin-left:30px;"><i class="fa fa-shopping-cart"> Cart</i>
+		<span class="badge" id="badge"></span></a>
+		<a href="#" class="notification" style="margin-left:10px;"><i class="fa fa-heart"> Favourites</i>
+		<!--<span class="badge">3</span>--></a>
+    </form>
+  </div>
+</div>
+</header>
+
+<div class="navbar">
+    <a href="#home">Grocery</a>
+  <a href="#news">Beauty Products</a>
+  <div class="dropdown">
+    <button class="dropbtn">Electronics
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Mobile</a>
+      <a href="#">Laptops And Desktops</a>
+      <a href="#">Smart Watches</a> 
+      <a href="#">Camera</a>
+      <a href="#">Tablets</a>
+        <a href="#">Powerbanks</a>
+         <a href="#">Smart Home Automation</a>
+      <a href="#">Accessories</a>
+    </div></div>
+     <div class="dropdown">
+    <button class="dropbtn">Home
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Home Furnishing</a>
+      <a href="#">Kitchen And Dining</a>
+      <a href="#">Living Room</a> 
+      <a href="#">Home Decor</a>
+      <a href="#">Pet Gradening</a>
+        <a href="#">Lightening And Electrials</a>
+    </div></div>
+	<div class="dropdown">
+    <button class="dropbtn">Appliances
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Refigerator</a>
+      <a href="#">Kitchen Appliances</a>
+      <a href="#">Televisions</a> 
+      <a href="#">Air Conditioners</a>
+      <a href="#">Washing Machines</a>
+        <a href="#">Seasonal Appliances</a>
+         <a href="#">Home Appliances</a>
+       <a href="#">Premium Appliances</a></div></div>
+     <div class="dropdown">
+    <button class="dropbtn">Fashion
+      <i class="fa fa-caret-down"></i>
+    </button>
+        <div class="dropdown-content">
+      <a href="#">Mens Top Wear</a>
+      <a href="#">Mens Bottom Wear</a>
+      <a href="#">Women Ethnic</a> 
+      <a href="#">Women Western Wear</a>
+      <a href="#">Kids</a>
+        <a href="#">Mens Footwear</a>
+         <a href="#">Women Footwear</a>
+       <a href="#">Essentials</a>
+        <a href="#">Winter</a>
+        <a href="#">Bag,Suitcases</a>
+</div>
+  </div> 
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src=".\images\resize-16195371841949667312resize16195023791629968405h4slide.jpg">
+  <div class="caption title"><h2>
+								iPhone <span class="primary">6 <strong>Plus</strong></span><br>
+							</h2>
+							<button class="button">Shop now</button></div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <a href="#"><img src=".\images\resize-161950262614585469image4.jpg" style="width:100%"></a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <a href="#"><img src=".\images\image1.jpg" style="width:100%"></a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <a href="#"><img src=".\images\resize-16195027711654560219image6.jpg" style="width:100%"></a>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <a href="#"><img src=".\images\resize-1619502522753737612image8.jpg" style="width:100%"></a>
+ 
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+   <span class="dot"></span> 
+   <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script><br><br>
+<div id="feature" class="features">
+        <div class="classes-title">
+            <h1 class="uppercase" align="center">Featured <em>Categories</em></h1><br>
+<div id="container">
+        <div class="tabbed">
+          <!--First Tab Content-->
+          <div class="tab-content" style="display:block;">
+            <div class="items">
+              <div class="cl">&nbsp;</div>
+              <ul>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\headphones.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125532</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Boat </a> </p>
+                  <p class="price">Price: <strong>&#x20B9;1499</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add1" onclick="input(); add1();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\sanitizer.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125510</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Apollo</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;500</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add2" onclick="input(); add2();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\suitcase.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125530</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Skybags</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;3000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add3" onclick="input(); add3();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\tablet.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125560</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Samsung</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;10000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add4" onclick="input(); add4();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\refigerator.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125545</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Samsung</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;150000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add5" onclick="input(); add5();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\shoes.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125580</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Adidas Shoes</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;8000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add6" onclick="input(); add6();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\perfume.png" alt="" /></a> </div>
+                  <p> Model Number: <span>125605</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Bleu</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;5000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add7" onclick="input(); add7();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\images (2).jpg" alt="" /></a> </div>
+                  <p> Item Number: <span>125555</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">US Polo</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;1000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add16" onclick="input(); add16();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+              </ul>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+		  </div>
+</div>
+</div>
+</div>
+
+<div id="feature" class="features">
+        <div class="classes-title">
+            <h1 class="uppercase" align="center" style="margin-top:50px;padding-top:150px;">Premium <em>Products</em></h1><br>
+<div id="container">
+        <div class="tabbed">
+          <!--First Tab Content-->
+          <div class="tab-content" style="display:block;">
+            <div class="items">
+              <div class="cl">&nbsp;</div>
+              <ul>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\apple.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125465</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Apple</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;110000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add8" onclick="input(); add8();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\ac.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125475</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Mitsubishi</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;70000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add15" onclick="input() add15();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\airdopes.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125485</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Boat</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;12000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add14" onclick="input(); add14();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\thermosteel.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125495</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Milton</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;2000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add13" onclick="input(); add13();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\iwatch.jpeg" alt="" /></a> </div>
+                  <p> Model Number: <span>125500</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Apple</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;45000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add9" onclick="input(); add9();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\macbook.jpg" alt="" /></a> </div>
+                  <p> Model Number: <span>125520</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Apple</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;150000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add10" onclick="input(); add10();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\anarkali.png" alt="" /></a> </div>
+                  <p> Item Number: <span>125600</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#">Rangmanch</a> </p>
+                  <p class="price">Price: <strong>&#x20B9;700</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add11" onclick="input(); add11();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+                <li>
+                  <div class="image"> <a href="#"><img src=".\images\womensh.jpeg" alt="" /></a> </div>
+                  <p> Model Number: <span>125715</span><br />
+                    <!--Size List : <span>8/8.5/9.5/10/11</span><br />-->
+                    Brand Name: <a href="#"></a>Puma </p>
+                  <p class="price">Price: <strong>&#x20B9;7000</strong></p>
+				  <a href="#" class="btn btn-default add-to-cart" id="add12" onclick="input(); add12();"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                </li>
+              </ul>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+		  </div>
+</div>
+</div>
+</div>
+
+<footer class="footer-distributed" style="margin-top:400px">
+
+			<div class="footer-left">
+          <!--<img src="img/logo.png">-->
+				<h3>About<span>Walmart</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2019 Walmart Cart Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<a href="#"><i class="fa fa-map-marker"></i></a>
+					  <p><span>309 - Rupa Solitaire,
+						 Bldg. No. A - 1</span>
+						Mahape, Ahmedabad - 380005</p>
+				</div>
+
+				<div>
+					<a href="#"><i class="fa fa-phone"></i></a>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<a href="#"><i class="fa fa-envelope"></i></a>
+					<p><a href="mailto:support@eduonix.com">support@walmart.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer the consumers a good eco-friendly platform to fulfill their requirements with the enumerate articles and products available.</p>
+				<div class="footer-icons">
+				<a href="#"><i class="fa fa-facebook icon"></i></a>
+					<a href="#"><i class="fa fa-twitter icon"></i></a>
+					<a href="#"><i class="fa fa-instagram icon"></i></a>
+					<a href="#"><i class="fa fa-linkedin icon"></i></a>
+					<a href="#"><i class="fa fa-youtube icon"></i></a>
+				</div>
+			</div><hr style=" background-color:white;margin-top:2px;">
+			<div class="footer-card-icon" style="padding-top:10px; padding-bottom:0px;">
+			 <i class="fa fa-cc-discover"></i>
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-paypal"></i>
+                        <i class="fa fa-cc-visa"></i>
+			</div>
+		</footer>
+<script>
+        var app = angular.module('App', []);
+
+        app.controller('Ctrl', function ($scope) {
+            $scope.name = "Hello World!";   
+        });
+    </script>
+
+</body>
+</html>
